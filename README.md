@@ -58,7 +58,7 @@ Person.h - Creation of the header file -
   
 using namespace std;
 
-class person{
+class Person{
 
 private:
 
@@ -110,7 +110,7 @@ void Person::Person(string name, int age, char gender){
   
 }
 
-string toString(){
+string Person::toString(){
 
     ostringstream buffer;
     
