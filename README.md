@@ -4,7 +4,7 @@ of what it is in OOP it is a good way to understand how to develop programs in O
 
 What I've come to realise is that Java is a much easier experience developing in a Object-oriented methodology as it is designed to do so whilst C++ I have to go through loop holes just to get what I want so take for example toString:
 
-#toString - Java Vs C++
+# toString - Java Vs C++
 
 Java -
 
