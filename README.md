@@ -13,23 +13,34 @@ In Java generally when creating a class you'd override Object's toString to make
 public class Person{
 
 private String name;
+
 private int age;
+
 private char gender;
 
 public Person(){
+
   name = "";
+  
   age = 0;
+  
   gender = 'N'; // N - Null
+  
 }// End Constructor
 
 public Person(String name, int age, char gender){
     this.name = name;
+    
     this.age = age;
+    
     this.gender = gender;
+
 } //End Constructor
 
 String toString(){
+
     return name + ", " + age + ", " + gender + "\n";
+    
 }// This toString returns the name, age and gender of the person class as a string.
 
 }
@@ -39,22 +50,35 @@ Whilst in C++ you can't return the age as it is a number and not a string cause 
 Person.h - Creation of the header file -
 
 #define PERSON_H
+
 #ifndef PERSON_H
+
 #include <iostream>
   
 using namespace std;
 
 class person{
+
 private:
+
 string name;
+
 int age;
+
 char gender;
+
 public:
+
 void Person(void);
+
 void Person(string name, int age, char gender);
+
 string toString(void); 
+
 friend inline ostream operator<<(const operator& op, const Person& person); 
+
 /*Up above with the operator<< and toString is the two different ways i've implemented a toString - I like the toString more as you'll see why*/.
+
 }
 
 #endif
@@ -66,25 +90,39 @@ Person.cpp - Implementing the functions -
 #include "Person.h"
 
 void Person::Person(){
+
   name = "";
+  
   age = 0;
+  
   gender = 'N';
+  
 }
 
 void Person::Person(string name, int age, char gender){
+
   this->name = name;
+  
   this->age = age;
+  
   this->gender = gender;
+  
 }
 
 string toString(){
+
     ostringstream buffer;
+    
     buffer << name << ", " << age << ", " << gender << endl;
+    
     return buffer.str();
+    
 } //I prefer this as it is in more the line of how you'd see it in Java.
 
 friend inline ostream operator<<(const operator& op, const Person& person){
+
     return op << person.name << ", " << person.age << ", " << person.gender << endl;
+    
 } /*Friend means that it'll allow me access to the private attributes as it is regarded as a friendly function and is defined out of the classes scope.*/
 
 - End Person.cpp
