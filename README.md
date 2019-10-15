@@ -10,7 +10,7 @@ Java -
 
 In Java generally when creating a class you'd override Object's toString to make a toString specific for that class so for example:
 
-public class Person{
+public class Person {
 
 private String name;
 
@@ -29,6 +29,7 @@ public Person(){
 }// End Constructor
 
 public Person(String name, int age, char gender){
+    
     this.name = name;
     
     this.age = age;
