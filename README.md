@@ -48,7 +48,7 @@ String toString(){
 
 Whilst in C++ you can't return the age as it is a number and not a string cause C++ just wont do the conversion. What you'll need to do is overload the operators particulry << so for example:
 
-Person.h - Creation of the header file -
+- Person.h - Creation of the header file -
 
 #define PERSON_H
 
@@ -86,7 +86,7 @@ friend inline ostream operator<<(const operator& op, const Person& person);
 
 - End Person.h
 
-Person.cpp - Implementing the functions - 
+- Person.cpp - Implementing the functions - 
 
 #include "Person.h"
 
